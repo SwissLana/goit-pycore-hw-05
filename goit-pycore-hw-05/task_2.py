@@ -14,6 +14,7 @@ def generator_numbers(text: str) -> Generator[float, None, None]:
     # або pattern = r'\d+\.\d+'
     # працює навіть, якщо числа у тексті записані з помилками
     # та не відокремлені чітко пробілами з обох боків
+    
     for match in re.finditer(pattern, text):
         yield float(match.group())
 
